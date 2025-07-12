@@ -13,6 +13,8 @@
 
 This work is inspired by real-world challenges in smart grid load simulation, where labeled power consumption data is often limited, noisy, or costly to collect.
 
+![8cafc92ce67384a64dc33254065d8f4](./assets/8cafc92ce67384a64dc33254065d8f4.png)
+
 ---
 
 ## 📌 Key Features
@@ -67,5 +69,4 @@ This work was initially developed as part of a time-series modeling research mod
 ## 📄 License
 
 This project is released under the MIT License.
-
 
