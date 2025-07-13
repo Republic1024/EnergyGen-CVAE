@@ -2,8 +2,7 @@
 
 **Conditional Variational Autoencoder for Synthetic Power Load Generation Based on Environmental Features**
 
-[![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)![PyTorch](https://img.shields.io/badge/built%20with-PyTorch-red?logo=pytorch&logoColor=white)![Task](https://img.shields.io/badge/task-Data%20Augmentation%20%7C%20Extrapolation-orange?logo=chart-bar)[![Application](https://img.shields.io/badge/application-Energy%20Simulation-lightgrey?logo=lightning&logoColor=black)]()
 
 ---
 
