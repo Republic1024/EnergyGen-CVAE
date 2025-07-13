@@ -103,9 +103,30 @@ This work was initially developed as part of a time-series modeling research mod
 
 ---
 
+## 📚 Citation
+
+If you find this project helpful in your research, please consider citing:
+
+```latex
+@misc{energygen_cvae_2025,
+  title        = {EnergyGen-CVAE: Conditional Variational Autoencoder for Synthetic Power Load Generation},
+  author       = {Yao Wu},
+  institution  = {Westlake University},
+  year         = {2025},
+  howpublished = {\url{https://github.com/Republic1024/EnergyGen-CVAE}},
+  note         = {Available at GitHub}
+}
+
+```
+
+---
+
 ## 📄 License
 
 This project is released under the MIT License.
 
+----
+
 ## ⭐️ Note
+
 If you find this project helpful, please ⭐️ star the repo or cite our work!
