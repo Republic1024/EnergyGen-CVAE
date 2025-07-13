@@ -2,7 +2,7 @@
 
 **Conditional Variational Autoencoder for Synthetic Power Load Generation Based on Environmental Features**
 
-[![Python](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 ---
@@ -53,7 +53,7 @@ We implement a CVAE where the conditional input $x \in \mathbb{R}^d$ includes ex
 
 We compare model performance using:
 
-* RMSE / MAE between generated and actual data
+* RMSE / KLD / MMD between generated and actual data
 * Coverage & width of confidence intervals
 * Visual fidelity across zones and time spans
 
@@ -64,6 +64,28 @@ This visualization demonstrates the predictive capability of our CVAE-based ener
 What’s significant is the model’s **ability to generalize beyond the training distribution**. By inputting modified or unseen contextual variables (such as slightly shifted `cons` patterns or new time slots), the system extrapolates plausible power consumption across zones, enabling simulation in out-of-distribution (OOD) scenarios and fine-grained energy control optimization.
 
 ![image-20250713235900865](./assets/image-20250713235900865.png)
+
+---
+
+### 🧪 Example Usage
+
+```python
+example_input = {
+    "Temperature": 9.0,
+    "Humidity": 86.7,
+    "WindSpeed": 0.08,
+    "GeneralDiffuseFlows": 117.2,
+    "DiffuseFlows": 30.43,
+    "Hour": 9,
+    "DayOfWeek": 0,
+    "Month": 1
+}
+
+generated = generate_power_consumption(example_input)
+for zone, value in generated.items():
+    print(f"{zone}: {value:.2f} kWh")
+
+```
 
 ---
 
@@ -86,3 +108,5 @@ This work was initially developed as part of a time-series modeling research mod
 
 This project is released under the MIT License.
 
+## ⭐️ Note
+If you find this project helpful, please ⭐️ star the repo or cite our work!
