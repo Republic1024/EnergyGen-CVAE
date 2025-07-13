@@ -16,6 +16,45 @@ This work is inspired by real-world challenges in smart grid load simulation, wh
 
 ![8cafc92ce67384a64dc33254065d8f4](./assets/8cafc92ce67384a64dc33254065d8f4.png)
 
+------
+
+### 📊 Dataset Description
+
+We use a structured time-series dataset consisting of **environmental regressors** and **zone-wise electricity consumption targets**. Each row corresponds to a 10-minute interval sample describing both external environmental conditions and internal energy usage across multiple zones.
+
+#### ➤ Input Features (Regressors):
+
+| Feature Name          | Description                     | Unit |
+| --------------------- | ------------------------------- | ---- |
+| `Temperature`         | Outdoor temperature             | °C   |
+| `Humidity`            | Relative humidity               | %    |
+| `WindSpeed`           | Wind speed                      | m/s  |
+| `GeneralDiffuseFlows` | Global diffuse solar irradiance | W/m² |
+| `DiffuseFlows`        | Diffuse irradiance              | W/m² |
+
+These regressors serve as the **conditioning inputs** to the CVAE model, enabling the generation of energy consumption patterns under different weather and solar scenarios.
+
+------
+
+#### 🎯 Target Variables (Outputs):
+
+| Target Name              | Description                               | Unit |
+| ------------------------ | ----------------------------------------- | ---- |
+| `PowerConsumption_Zone1` | Power usage in Zone 1 (e.g., office area) | kWh  |
+| `PowerConsumption_Zone2` | Power usage in Zone 2 (e.g., HVAC system) | kWh  |
+| `PowerConsumption_Zone3` | Power usage in Zone 3 (e.g., lighting)    | kWh  |
+| `TotalLoad`              | Aggregated consumption across all zones   | kWh  |
+
+The **model aims to learn the conditional distribution** of these target values given the environmental inputs, and to generate realistic, uncertainty-aware consumption predictions.
+
+### 
+
+| Feature Name | Description                     |
+| ------------ | ------------------------------- |
+| `Hour`       | Hour of day (0–23)              |
+| `DayOfWeek`  | Day of week (0=Sun, ..., 6=Sat) |
+| `Month`      | Month index (1–12)              |
+
 ---
 
 ## 📌 Key Features
