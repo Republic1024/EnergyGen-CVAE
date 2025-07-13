@@ -13,6 +13,8 @@
 
 This work is inspired by real-world challenges in smart grid load simulation, where labeled power consumption data is often limited, noisy, or costly to collect.
 
+![what_we_do](./assets/cvae_architecture_diagram.svg)
+
 ![8cafc92ce67384a64dc33254065d8f4](./assets/8cafc92ce67384a64dc33254065d8f4.png)
 
 ---
@@ -25,6 +27,8 @@ This work is inspired by real-world challenges in smart grid load simulation, wh
 - 🧠 **Scalable CVAE structure**: Easily replace encoder/decoder architectures.
 - 🔁 **Data augmentation ready**: Useful for enriching load prediction datasets.
 
+![7bfebf08824bd51932bf9918011a4e0](./assets/7bfebf08824bd51932bf9918011a4e0.png)
+
 
 ---
 
@@ -32,12 +36,16 @@ This work is inspired by real-world challenges in smart grid load simulation, wh
 
 We implement a CVAE where the conditional input $x \in \mathbb{R}^d$ includes external weather features and the target $y \in \mathbb{R}^k$ is the actual consumption vector.
 
-Key techniques:
+### Key techniques:
 
 * KL annealing
 * MSE + reconstruction loss
 * Per-zone decoder output
 * Random z sampling for diverse generation
+
+### Loss function:
+
+![image-20250713235656107](./assets/image-20250713235656107.png)
 
 ---
 
@@ -48,6 +56,14 @@ We compare model performance using:
 * RMSE / MAE between generated and actual data
 * Coverage & width of confidence intervals
 * Visual fidelity across zones and time spans
+
+Visualization:
+
+This visualization demonstrates the predictive capability of our CVAE-based energy consumption model. Given a set of environmental inputs — temperature, humidity, lighting intensity, time, weekday, and occupancy rate — the model generates energy usage forecasts across multiple building zones.
+
+What’s significant is the model’s **ability to generalize beyond the training distribution**. By inputting modified or unseen contextual variables (such as slightly shifted `cons` patterns or new time slots), the system extrapolates plausible power consumption across zones, enabling simulation in out-of-distribution (OOD) scenarios and fine-grained energy control optimization.
+
+![image-20250713235900865](./assets/image-20250713235900865.png)
 
 ---
 
