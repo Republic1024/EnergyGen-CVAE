@@ -125,7 +125,7 @@ for zone, value in generated.items():
 
 ```
 
----
+
 
 ## 💼 Applications
 
@@ -134,13 +134,7 @@ for zone, value in generated.items():
 * 📉 Data-driven forecasting model pretraining
 * 📊 Enhancing robustness of anomaly detection models
 
----
 
-## 🤝 Acknowledgements
-
-This work was initially developed as part of a time-series modeling research module. The structure draws inspiration from academic works on CVAE and real-world energy modeling.
-
----
 
 ## 📚 Citation
 
@@ -149,7 +143,7 @@ If you find this project helpful in your research, please consider citing:
 ```latex
 @misc{energygen_cvae_2025,
   title        = {EnergyGen-CVAE: Conditional Variational Autoencoder for Synthetic Power Load Generation},
-  author       = {Yao Wu},
+  author       = {Yao Wu, Peng Yue},
   institution  = {Westlake University},
   year         = {2025},
   howpublished = {\url{https://github.com/Republic1024/EnergyGen-CVAE}},
@@ -158,13 +152,13 @@ If you find this project helpful in your research, please consider citing:
 
 ```
 
----
+
 
 ## 📄 License
 
 This project is released under the MIT License.
 
-----
+
 
 ## ⭐️ Note
 
