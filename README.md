@@ -57,7 +57,7 @@ The **model aims to learn the conditional distribution** of these target values 
 
 ### 🔥Performance
 
-#### **Zone 1 **
+#### Zone 1 
 
 | Metric (Zone 1)   | CVAE      | FlowCVAE  | XGBoost  | Lasso         | CatBoost      |
 | ----------------- | --------- | --------- | -------- | ------------- | ------------- |
@@ -72,7 +72,7 @@ The **model aims to learn the conditional distribution** of these target values 
 
 
 
-#### **Zone 2 **
+#### Zone 2 
 
 | Metric (Zone 2)   | CVAE        | FlowCVAE      | XGBoost   | Lasso   | CatBoost  |
 | ----------------- | ----------- | ------------- | --------- | ------- | --------- |
@@ -87,7 +87,7 @@ The **model aims to learn the conditional distribution** of these target values 
 
 
 
-#### **Zone 3 **
+#### Zone 3
 
 | Metric (Zone 3)   | CVAE    | FlowCVAE      | XGBoost   | Lasso     | CatBoost    |
 | ----------------- | ------- | ------------- | --------- | --------- | ----------- |
